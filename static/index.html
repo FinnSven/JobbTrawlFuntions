@@ -7,15 +7,20 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <h1>Web Scraper</h1>
-    <form id="scraper-form">
-        <label for="urls">URLs (comma-separated):</label>
-        <input type="text" id="urls" name="urls" required>
-        <label for="search_term">Search Term:</label>
-        <input type="text" id="search_term" name="search_term" required>
-        <button type="submit">Search</button>
-    </form>
-    <div id="results"></div>
+    {% if session.username %}
+        <h1>Web Scraper</h1>
+        <form id="scraper-form">
+            <label for="urls">URLs (comma-separated):</label>
+            <input type="text" id="urls" name="urls" required>
+            <label for="search_term">Search Term:</label>
+            <input type="text" id="search_term" name="search_term" required>
+            <button type="submit">Search</button>
+        </form>
+        <div id="results"></div>
+        <a href="{{ url_for('logout') }}">Logout</a>
+    {% else %}
+        <h1>Please <a href="{{ url_for('login') }}">login</a> to use the Web Scraper</h1>
+    {% endif %}
     <script src="js/scripts.js"></script>
 </body>
 </html>
