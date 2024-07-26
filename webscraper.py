@@ -18,7 +18,7 @@ def search_website(url, search_term):
 
     occurrences = []
     for line in text.split('\n'):
-        if search_term.lower() in line.lower()):
+        if search_term.lower() in line.lower():
             occurrences.append(line.strip())
 
     return occurrences
