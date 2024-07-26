@@ -18,5 +18,7 @@ def search():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
-if __name__ == '__main__':
-    app.run(debug=True)
+@app.route('/')
+def index():
+    return app.send_static_file('index.html')
+    app.run(debug=True, host='0.0.0.0')

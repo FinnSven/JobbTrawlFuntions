@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Scraper</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h1>Web Scraper</h1>
+    <form id="scraper-form">
+        <label for="urls">URLs (comma-separated):</label>
+        <input type="text" id="urls" name="urls" required>
+        <label for="search_term">Search Term:</label>
+        <input type="text" id="search_term" name="search_term" required>
+        <button type="submit">Search</button>
+    </form>
+    <div id="results"></div>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
